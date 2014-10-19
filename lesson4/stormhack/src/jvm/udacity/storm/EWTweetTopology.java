@@ -6,6 +6,7 @@ import backtype.storm.StormSubmitter;
 import backtype.storm.topology.TopologyBuilder;
 import backtype.storm.tuple.Fields;
 import backtype.storm.utils.Utils;
+import udacity.storm.TwitterCredentials;
 
 class EWTweetTopology
 {
@@ -27,10 +28,10 @@ class EWTweetTopology
 
     // now create the tweet spout with the credentials
     TweetGeoSpout tweetSpout = new TweetGeoSpout(
-        "IBIcbZHWnVPVjNArE2wbnbCTW",
-        "5GXsTi5DNMNyn02O9OHnD1nvbPVHgvZeZ8XAdrpA7iWVbcJo53",
-        "18841572-q1tPUaScwD0kQ1PsT0EC68oopB9UU02MnTD3Fo0nk",
-        "PS6kCnU7iHn99ag2rSBPKwv3cEBa4fu9DLSWQkRU6dxBR"
+						 TwitterCredentials.Cred1,
+						 TwitterCredentials.Cred2,
+						 TwitterCredentials.Cred3,
+						 TwitterCredentials.Cred4
     );
 
     // attach the tweet spout to the topology - parallelism of 1
